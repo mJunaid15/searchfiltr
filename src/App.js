@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Sresult from './Sresult';
 
-function App() {
+
+
+const App = () => {
+  const [ imge, setImg ] = useState("");
+
+  const changeEvent = (event) => {
+
+    const data = event.target.value;
+    setImg(data);
+
+    console.log(data);
+
+  };
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <div className="seachbarr">
+        <input type="text" placeholder="Search anything" value={imge} onChange={changeEvent} />
+
+        {imge === "" ? null : <Sresult data ={imge}/> } 
+      </div>
+
+     
+    </>
+  )
+};
 
 export default App;

@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.seachbarr{
+  width: 50%;
+  background-color: bisque;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+.seachbarr input{
+  margin: 30px 0px;
+  padding: 5px 10px ;
+  border-radius: 5px;
+
+}
